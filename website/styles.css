@@ -1,0 +1,95 @@
+body 
+{
+  background-color: #ffffff;
+}
+
+#titl 
+{
+  text-align: center;
+  font-size: 2vw; 
+  font-family: 'Encode Sans Condensed';
+  color: darkblue;
+  background-color: #adadad;
+  border: 3px  solid green;
+}
+
+#liv 
+{
+  cursor:pointer;
+  font-family: 'Encode Sans Condensed';
+  color: white;
+  text-indent: 14px;
+  background-color: #0000a0;
+  border: 3px  solid green;
+  width: 150px;
+  font-size: larger;
+  height: 45px;
+  border-radius: 12px 12px 12px 12px;
+}
+
+#node1
+{
+  display: inline-block;
+  padding: 20px;
+  font-family: 'Encode Sans Condensed';
+  background-color: #0741ed;
+  color: white;
+  height: 35px;
+  width: 80px;
+  border-radius: 12px 12px 12px 12px;
+}
+#node1:hover
+{
+  cursor: pointer;
+}
+
+#node2
+{
+  display: inline-block;
+  padding: 20px;
+  font-family: 'Encode Sans Condensed';
+  background-color: #0741ed;
+  color: white;
+  height: 35px;
+  width: 80px;
+  border-radius: 12px 12px 12px 12px;
+}
+#node2:hover
+{
+  cursor: pointer;
+}
+
+
+#node3
+{
+  display: inline-block;
+  padding: 20px;
+  font-family: 'Encode Sans Condensed'; 
+  background-color: #0741ed;
+  color: white;
+  height: 35px;
+  width: 80;
+  border-radius: 12px 12px 12px 12px;
+}
+#node3:hover
+{
+  cursor: pointer;
+}
+
+
+#twitter
+{
+  text-align: right;
+  width: 250px;
+}
+
+#n1
+{
+text-align: left;
+}
+
+#n2
+{
+  text-align: right;
+  display: inline-block;
+}
