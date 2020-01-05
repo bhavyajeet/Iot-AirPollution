@@ -1,0 +1,75 @@
+<html>
+<title>
+  Indoor Air Pollution 
+</title>
+  <head>
+	<link rel="stylesheet" type="text/css" href="./styles.css">	
+	<link href='https://fonts.googleapis.com/css?family=Encode Sans Condensed' rel='stylesheet'>
+  </head>
+	<body id="boody">
+	<div id="titl">
+		<h3>
+		Indoor Air Pollution (Houses)
+		</h3>
+	</div>
+	<br/>
+		<button onclick="myFunction()" id="liv">
+			Live Data 
+		</button>
+		<br/>
+		<div id="foo">
+		<div id="node1">Node 1</div> 
+		<div id="node2">Node 2</div> 
+		<div id="node3">Node 3</div>
+		
+		<script>
+	function myFunction() {
+  		var x = document.getElementById("foo");
+  		if (x.style.display === "none") {
+    x.style.display = "inline-block";
+  	} else {
+    x.style.display = "none";
+  	}
+} 
+		</script>
+		<div id="n1">
+		<div id="temp1"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/864235/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="hum1"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/864235/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="co1"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/864604/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="no21"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/864604/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="nh31"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/864604/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="pm2.51"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/864607/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="pm101"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/864607/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		</div>
+		<br/>
+		<!--
+		
+		-->
+		<div id="n2">
+				<div id="temp2"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/900845/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="hum2"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/900845/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="co2"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/900849/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="no22"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/900849/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="nh32"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/900849/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="pm2.52"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/900848/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="pm102"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/900848/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		</div>
+		<div id="n3">
+				<div id="temp3"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/911115/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="hum3"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/911115/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="co3"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/911120/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="no23"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/911120/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="nh33"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/911120/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="pm2.53"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/911122/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		<div id="pm103"><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/911122/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></div>
+		</div>
+	</div>
+	<div id="twitter">
+			<a class="twitter-timeline" href="https://twitter.com/iaqforum?lang=en"
+			 data-height="320"; >
+			 Tweets by </a>                                      
+			 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			
+	</div>
+	</body>
+</html>
