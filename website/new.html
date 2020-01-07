@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $.ajax({
+         url: "http://192.168.43.9:8080/~/in-cse/in-name/Project_1_Indoor_Air_Pollution_Management/Classroom_1/la",
+         // data: { signature: authHeader },
+         type: "GET",
+         beforeSend: function(xhr){xhr.setRequestHeader('X-M2M-Origin', 'admin:admin');},
+         success: function() { alert('Success!' + authHeader); }
+         
+
+    });
+    alert('sad')
+  });
+});
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+<button>Send an HTTP GET request to a page and get the result back</button>
+
+</body>
+</html>
