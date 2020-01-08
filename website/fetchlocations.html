@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            getdata = function () {
+
+                const params = {
+                    headers: {
+                        "X-M2M-Origin": "admin:admin", "Content-Type": "application/json"
+                    },
+                    method: "GET",
+                }
+                fetch("http://192.168.137.159:8080/~/in-cse/in-name/Project_1_Indoor_Air_Pollution_Management/Classroom_1/la", params).then(data => { return data.json() })
+                    .then(res => {
+                        console.log(res);
+                        pm_level = res["m2m:cin"]["con"].split(',')[2];
+                        $("#1").text(pm_level);
+                        color = "white"
+                        pmval = Number(pm_level);
+                        if(pmval >= 0 && pmval <=60 )
+                        {
+                            color = "green"
+                        } 
+                        if(pmval >60  && pmval <=90 )
+                        {
+                            color = "yellow"
+                        } 
+                        if(pmval > 90 && pmval <= 120 )
+                        {
+                            color = "orange"
+                        } 
+                        if(pmval > 120 && pmval <= 250 )
+                        {
+                            color = "red"
+                        } 
+                        if(pmval > 250 )
+                        {
+                            color = "maroon"
+                        } 
+
+                        $("#1").css("background-color", color);
+                    }
+                    )
+                    .catch(error => console.log(error))
+
+                fetch("http://192.168.137.159:8080/~/in-cse/in-name/Project_1_Indoor_Air_Pollution_Management/Classroom_1/la", params).then(data => { return data.json() })
+                    .then(res => {
+                        console.log(res);
+                        pm_level = res["m2m:cin"]["con"].split(',')[2];
+                        $("#2").text(pm_level);
+                        color = "white"
+                        pmval = Number(pm_level);
+                        if(pmval >= 0 && pmval <=60 )
+                        {
+                            color = "green"
+                        } 
+                        if(pmval >60  && pmval <=90 )
+                        {
+                            color = "yellow"
+                        } 
+                        if(pmval > 90 && pmval <= 120 )
+                        {
+                            color = "orange"
+                        } 
+                        if(pmval > 120 && pmval <= 250 )
+                        {
+                            color = "red"
+                        } 
+                        if(pmval > 250 )
+                        {
+                            color = "maroon"
+                        } 
+
+                        $("#2").css("background-color", color);
+                    }
+                    )
+                    .catch(error => console.log(error))
+
+                fetch("http://192.168.137.159:8080/~/in-cse/in-name/Project_1_Indoor_Air_Pollution_Management/Classroom_1/la", params).then(data => { return data.json() })
+                    .then(res => {
+                        console.log(res);
+                        pm_level = res["m2m:cin"]["con"].split(',')[2];
+                        $("#3").text(pm_level);
+                        color = "white"
+                        pmval = Number(pm_level);
+                        if(pmval >= 0 && pmval <=60 )
+                        {
+                            color = "green"
+                        } 
+                        if(pmval >60  && pmval <=90 )
+                        {
+                            color = "yellow"
+                        } 
+                        if(pmval > 90 && pmval <= 120 )
+                        {
+                            color = "orange"
+                        } 
+                        if(pmval > 120 && pmval <= 250 )
+                        {
+                            color = "red"
+                        } 
+                        if(pmval > 250 )
+                        {
+                            color = "maroon"
+                        } 
+
+                        $("#3").css("background-color", color);
+                    }
+                    )
+                    .catch(error => console.log(error))
+
+
+
+            }
+
+            window.setInterval(getdata, 500)
+        });
+    </script>
+</head>
+
+<body>
+
+    <p>Location 1:</p><br>
+    <h2 id="1"></h2><br>
+
+    <p>Location 2:</p><br>
+    <h2 id="2"></h2><br>
+
+    <p>Location 3:</p><br>
+    <h2 id="3"></h2><br>
+
+</body>
+
+</html>
