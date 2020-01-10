@@ -1,37 +1,95 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
 
-$(document).ready(function(){
-  $("button").click(function(){
-    $.ajax({
-         url: "http://192.168.43.9:8080/~/in-cse/in-name/Project_1_Indoor_Air_Pollution_Management/Classroom_1/la",
-         // data: { signature: authHeader },
-         type: "GET",
-         beforeSend: function(xhr){xhr.setRequestHeader('X-M2M-Origin', 'admin:admin');},
-         success: function() { alert('Success!' + authHeader); }
-         
+        $(document).ready(function () {
+            getdata = function () {
 
-    });
-    alert('sad')
-  });
-});
+                const params = {
+                    headers: {
+                        "X-M2M-Origin": "admin:admin", "Content-Type": "application/json"
+                    },
+                    method: "GET",
+                }
+
+                fetch("http://192.168.43.9:8080/~/in-cse/in-name/node1_novapm/DATA/la", params).then(data => { return data.json() })
+                    .then(res => {
+                        console.log(res);
+                        pm_level = res["m2m:cin"]["con"];
+                        $("#1").text(pm_level);
+                        color = "white"
+                        pmval = Number(pm_level);
+                        if (pmval >= 0 && pmval <= 60) {
+                            color = "green"
+                        }
+                        if (pmval > 60 && pmval <= 90) {
+                            color = "yellow"
+                            message = "PM levels exceeded 60"
+                            fetch('https://api.telegram.org/bot940000813:AAEi0-2amgOJO82i-v8T5NqeMxvqf2181nw/sendMessage?chat_id=942357240&text=' + message)
+                                .then(res => {
+                                    console.log(res)
+                                })
+                                .catch(err => {
+                                    console.log(err)
+                                })
+
+                        }
+                        if (pmval > 90 && pmval <= 120) {
+                            color = "orange"
+                            message = "PM levels exceeded 90"
+                            fetch('https://api.telegram.org/bot940000813:AAEi0-2amgOJO82i-v8T5NqeMxvqf2181nw/sendMessage?chat_id=942357240&text=' + message)
+                                .then(res => {
+                                    console.log(res)
+                                })
+                                .catch(err => {
+                                    console.log(err)
+                                })
+                        }
+                        if (pmval > 120 && pmval <= 250) {
+                            color = "red"
+                            message = "PM levels exceeded 120"
+                            fetch('https://api.telegram.org/bot940000813:AAEi0-2amgOJO82i-v8T5NqeMxvqf2181nw/sendMessage?chat_id=942357240&text=' + message)
+                                .then(res => {
+                                    console.log(res)
+                                })
+                                .catch(err => {
+                                    console.log(err)
+                                })
+                        }
+                        if (pmval > 250) {
+                            color = "maroon"
+                            message = "PM levels exceeded 250"
+                            fetch('https://api.telegram.org/bot940000813:AAEi0-2amgOJO82i-v8T5NqeMxvqf2181nw/sendMessage?chat_id=942357240&text=' + message)
+                                .then(res => {
+                                    console.log(res)
+                                })
+                                .catch(err => {
+                                    console.log(err)
+                                })
+                        }
+
+                        $("#1").css("background-color", color);
+                    }
+                    )
+                    .catch(error => console.log(error))
 
 
 
+            }
 
-
-
-
-
-
-</script>
+            window.setInterval(getdata, 3000)
+        });
+    </script>
 </head>
+
 <body>
 
-<button>Send an HTTP GET request to a page and get the result back</button>
+    <h1>PM2.5 value measured at node:</h1>
+    <span id="1" style="font-size: 50px; border-radius: 5px;"></span><br>
 
 </body>
+
 </html>
