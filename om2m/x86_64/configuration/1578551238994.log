@@ -1,0 +1,199 @@
+!SESSION 2020-01-09 11:57:18.902 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Command-line arguments:  -console
+
+!ENTRY org.eclipse.om2m.datamapping.jaxb 4 0 2020-01-09 11:57:19.767
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.om2m.datamapping.jaxb [29]
+  Unresolved requirement: Import-Package: org.eclipse.om2m.datamapping.service
+    -> Export-Package: org.eclipse.om2m.datamapping.service; bundle-symbolic-name="org.eclipse.om2m.datamapping.service"; bundle-version="1.0.0.20180211-2015"; version="0.0.0"
+       org.eclipse.om2m.datamapping.service [30]
+         Unresolved requirement: Require-Bundle: org.eclipse.om2m.commons
+           -> Bundle-SymbolicName: org.eclipse.om2m.commons; bundle-version="1.0.0.20180211-2015"
+              org.eclipse.om2m.commons [25]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1562)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.SystemModule.startWorker(SystemModule.java:242)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.container.SystemModule.start(SystemModule.java:172)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:393)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:412)
+	at org.eclipse.osgi.launch.Equinox.start(Equinox.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:318)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:231)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.om2m.binding.coap 4 0 2020-01-09 11:57:19.770
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.om2m.binding.coap [22]
+  Unresolved requirement: Import-Package: org.eclipse.om2m.binding.service
+    -> Export-Package: org.eclipse.om2m.binding.service; bundle-symbolic-name="org.eclipse.om2m.binding.service"; bundle-version="1.0.0.20180211-2015"; version="0.0.0"
+       org.eclipse.om2m.binding.service [24]
+         Unresolved requirement: Require-Bundle: org.eclipse.om2m.commons
+           -> Bundle-SymbolicName: org.eclipse.om2m.commons; bundle-version="1.0.0.20180211-2015"
+              org.eclipse.om2m.commons [25]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1562)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.om2m.binding.http 4 0 2020-01-09 11:57:19.771
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.om2m.binding.http [23]
+  Unresolved requirement: Import-Package: org.eclipse.om2m.binding.service
+    -> Export-Package: org.eclipse.om2m.binding.service; bundle-symbolic-name="org.eclipse.om2m.binding.service"; bundle-version="1.0.0.20180211-2015"; version="0.0.0"
+       org.eclipse.om2m.binding.service [24]
+         Unresolved requirement: Require-Bundle: org.eclipse.om2m.commons
+           -> Bundle-SymbolicName: org.eclipse.om2m.commons; bundle-version="1.0.0.20180211-2015"
+              org.eclipse.om2m.commons [25]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1562)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.om2m.persistence.eclipselink 4 0 2020-01-09 11:57:19.771
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.om2m.persistence.eclipselink [33]
+  Unresolved requirement: Import-Package: org.eclipse.om2m.persistence.service
+    -> Export-Package: org.eclipse.om2m.persistence.service; bundle-symbolic-name="org.eclipse.om2m.persistence.service"; bundle-version="1.0.0.20180211-2015"; version="0.0.0"
+       org.eclipse.om2m.persistence.service [34]
+         Unresolved requirement: Require-Bundle: org.eclipse.om2m.commons
+           -> Bundle-SymbolicName: org.eclipse.om2m.commons; bundle-version="1.0.0.20180211-2015"
+              org.eclipse.om2m.commons [25]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1562)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.om2m.ipe.enocean 4 0 2020-01-09 11:57:19.772
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.om2m.ipe.enocean [32]
+  Unresolved requirement: Import-Package: org.eclipse.om2m.core.service
+    -> Export-Package: org.eclipse.om2m.core.service; bundle-symbolic-name="org.eclipse.om2m.core.service"; bundle-version="1.0.0.20180211-2015"; version="0.0.0"
+       org.eclipse.om2m.core.service [28]
+         Unresolved requirement: Require-Bundle: org.eclipse.om2m.commons
+           -> Bundle-SymbolicName: org.eclipse.om2m.commons; bundle-version="1.0.0.20180211-2015"
+              org.eclipse.om2m.commons [25]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.om2m.core 4 0 2020-01-09 11:57:19.831
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.om2m.core [27]
+  Unresolved requirement: Import-Package: org.eclipse.om2m.binding.service
+    -> Export-Package: org.eclipse.om2m.binding.service; bundle-symbolic-name="org.eclipse.om2m.binding.service"; bundle-version="1.0.0.20180211-2015"; version="0.0.0"
+       org.eclipse.om2m.binding.service [24]
+         Unresolved requirement: Require-Bundle: org.eclipse.om2m.commons
+           -> Bundle-SymbolicName: org.eclipse.om2m.commons; bundle-version="1.0.0.20180211-2015"
+              org.eclipse.om2m.commons [25]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1562)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.om2m.semantics 4 0 2020-01-09 11:57:19.831
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.om2m.semantics [35]
+  Unresolved requirement: Import-Package: org.eclipse.om2m.commons.service.semantics
+    -> Export-Package: org.eclipse.om2m.commons.service.semantics; bundle-symbolic-name="org.eclipse.om2m.commons"; bundle-version="1.0.0.20180211-2015"; version="0.0.0"
+       org.eclipse.om2m.commons [25]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1562)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.om2m.webapp.resourcesbrowser.xml 4 0 2020-01-09 11:57:19.832
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.om2m.webapp.resourcesbrowser.xml [36]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1562)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.osgi 4 0 2020-01-09 11:57:19.833
+!MESSAGE Bundle initial@reference:file:plugins/org.eclipse.om2m.binding.coap_1.0.0.20180211-2015.jar was not resolved.
+
+!ENTRY org.eclipse.osgi 4 0 2020-01-09 11:57:19.833
+!MESSAGE Bundle initial@reference:file:plugins/org.eclipse.om2m.binding.http_1.0.0.20180211-2015.jar was not resolved.
+
+!ENTRY org.eclipse.osgi 4 0 2020-01-09 11:57:19.833
+!MESSAGE Bundle initial@reference:file:plugins/org.eclipse.om2m.core_1.0.0.20180211-2015.jar was not resolved.
+
+!ENTRY org.eclipse.osgi 4 0 2020-01-09 11:57:19.833
+!MESSAGE Bundle initial@reference:file:plugins/org.eclipse.om2m.datamapping.jaxb_1.0.0.20180211-2015.jar was not resolved.
+
+!ENTRY org.eclipse.osgi 4 0 2020-01-09 11:57:19.833
+!MESSAGE Bundle initial@reference:file:plugins/org.eclipse.om2m.persistence.eclipselink_1.0.0.20180211-2015.jar was not resolved.
+
+!ENTRY org.eclipse.osgi 4 0 2020-01-09 11:57:19.834
+!MESSAGE Bundle initial@reference:file:plugins/org.eclipse.om2m.semantics_1.0.0.20180211-2015.jar was not resolved.
+
+!ENTRY org.eclipse.osgi 4 0 2020-01-09 11:57:19.834
+!MESSAGE Bundle initial@reference:file:plugins/org.eclipse.om2m.webapp.resourcesbrowser.xml_1.0.0.20180211-2015.jar was not resolved.
